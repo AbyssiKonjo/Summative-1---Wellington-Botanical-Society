@@ -1,0 +1,37 @@
+// Mixin for headers
+@mixin header-text {
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    h1{
+        font-family: "Abril Fatface", serif;
+        font-size: 3.5em;
+        color: $main-header-colour;
+        letter-spacing: 2px;
+    }
+}
+
+// Mixin for text
+@mixin body-text {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    top: 50px;
+    width: 90%;
+    padding: 20px;
+    border: $border-outline;
+    border-radius: 10px;
+    gap: 10px;
+    font-family: 'roboto';
+}

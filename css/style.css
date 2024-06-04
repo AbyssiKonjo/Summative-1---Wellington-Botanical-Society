@@ -1,0 +1,538 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../images/Wellington\ Botanic\ Garden.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Navigation Header */
+.navigation-header {
+  padding-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.navigation-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  /* Hamburger */
+  /* Navigation Items */
+}
+.navigation-header nav .hamburger {
+  position: absolute;
+  right: 6%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 100;
+  color: white;
+  background-color: #669900;
+  font-family: "roboto";
+  border-radius: 8px;
+  z-index: 3;
+}
+.navigation-header nav .hamburger #closeHam {
+  display: none;
+  font-weight: 100;
+}
+.navigation-header nav .logo-container img {
+  display: none;
+}
+.navigation-header nav .navigation-items {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 1%;
+  background-color: #669900;
+  border-radius: 10px 0 0 10px;
+  padding: 62px 30px;
+  gap: 10px;
+  font-size: 40px;
+  z-index: 3;
+}
+.navigation-header nav .navigation-items > a {
+  color: black;
+  text-decoration: none;
+  font-family: "roboto";
+}
+.navigation-header nav .background-active a {
+  color: white;
+  text-decoration: none;
+  font-family: "roboto";
+  border-radius: 10px;
+}
+
+/* Home Page */
+.hero-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40px;
+  padding-bottom: 15%;
+}
+.hero-container .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86%;
+  height: 300px;
+  background-image: url(../images/logo.webp);
+  border-radius: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 6px -5px rgba(0, 0, 0, 0.5);
+}
+.button .button__link {
+  text-decoration: none;
+}
+.button .button__join {
+  display: flex;
+  margin: auto;
+  padding: 10px 40px;
+  background-color: #669900;
+  color: white;
+  font-size: 4.5em;
+  border: none;
+  border-radius: 10px;
+}
+.button .button__join:hover {
+  background-color: #496d00;
+  box-shadow: inset 8px 8px 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  background-color: #669900;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 40px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+}
+.header-container h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 3.5em;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.text-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  width: 90%;
+  padding: 20px;
+  border: 4px solid #669900;
+  border-radius: 10px;
+  gap: 10px;
+  font-family: "roboto";
+  /* Membership Section */
+}
+.text-container button {
+  width: 50%;
+  background-color: #669900;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 6px 6px 6px -5px rgba(0, 0, 0, 0.5);
+}
+.text-container button:hover {
+  background-color: #496d00;
+  box-shadow: inset 8px 8px 8px -4px rgba(0, 0, 0, 0.5);
+}
+.text-container p {
+  padding: 10px 0;
+}
+.text-container li {
+  margin: 20px;
+}
+.text-container .member-type-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.text-container .member-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.text-container .member-choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.text-container .member-choice h4 {
+  font-weight: 500;
+}
+.text-container .title-price .menu-heading,
+.text-container .title-price .menu-price {
+  font-size: 1em;
+}
+.text-container .member-fee {
+  display: flex;
+  align-self: flex-start;
+  gap: 10px;
+}
+.text-container .join-button__button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #669900;
+  color: white;
+  border: none;
+  font-size: 2em;
+  border-radius: 10px;
+}
+
+/* Sign-up Form */
+.form-container {
+  position: relative;
+  top: 70px;
+  font-family: "roboto";
+}
+.form-container form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 10px #669900;
+  -webkit-box-shadow: 0px 0px 10px 10px rgb(61, 92, 0);
+  -moz-box-shadow: 0px 0px 10px 10px rgb(61, 92, 1);
+}
+.form-container form h2 {
+  text-align: center;
+  color: #669900;
+  font-size: 2em;
+  padding-bottom: 5%;
+}
+.form-container form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form-container form input {
+  margin-bottom: 20px;
+  border: 3px solid #669900;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(152, 168, 173);
+}
+.form-container form input input:focus,
+.form-container form input input:active {
+  background-color: rgb(242, 242, 242);
+}
+.form-container form #formSubmit {
+  background-color: #669900;
+  color: white;
+  font-size: 3em;
+  border-radius: 5px;
+  border: none;
+}
+.form-container form #formSubmit:hover {
+  background-color: #496d00;
+  box-shadow: inset 8px 8px 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery */
+.gallery-grid-container {
+  position: relative;
+  top: 70px;
+  margin: auto;
+  width: 86%;
+  display: grid;
+  gap: 10px;
+}
+.gallery-grid-container .box1, .gallery-grid-container .box2, .gallery-grid-container .box3, .gallery-grid-container .box4, .gallery-grid-container .box5, .gallery-grid-container .box6, .gallery-grid-container .box7, .gallery-grid-container .box8, .gallery-grid-container .box9, .gallery-grid-container .box10, .gallery-grid-container .box11, .gallery-grid-container .box12 {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  border: 4px solid #669900;
+  background-size: cover;
+  background-position: center;
+}
+.gallery-grid-container .box1 .text-background, .gallery-grid-container .box2 .text-background, .gallery-grid-container .box3 .text-background, .gallery-grid-container .box4 .text-background, .gallery-grid-container .box5 .text-background, .gallery-grid-container .box6 .text-background, .gallery-grid-container .box7 .text-background, .gallery-grid-container .box8 .text-background, .gallery-grid-container .box9 .text-background, .gallery-grid-container .box10 .text-background, .gallery-grid-container .box11 .text-background, .gallery-grid-container .box12 .text-background {
+  background-color: #669900;
+  position: relative;
+  font-family: "roboto";
+  font-size: 1em;
+  top: 80%;
+  width: 55%;
+  padding: 1%;
+  border-radius: 0 4px 4px 0;
+  color: white;
+}
+.gallery-grid-container .box1, .gallery-grid-container .box3, .gallery-grid-container .box5, .gallery-grid-container .box7, .gallery-grid-container .box9, .gallery-grid-container .box11 {
+  grid-column: 1/1;
+}
+.gallery-grid-container .box2, .gallery-grid-container .box4, .gallery-grid-container .box6, .gallery-grid-container .box8, .gallery-grid-container .box10, .gallery-grid-container .box12 {
+  grid-column: 2/2;
+}
+.gallery-grid-container .box1 {
+  grid-row: 1/2;
+  background-image: url(../images/pōhutukawa.webp);
+}
+.gallery-grid-container .box2 {
+  grid-row: 1/2;
+  background-image: url(../images/Flax.webp);
+}
+.gallery-grid-container .box3 {
+  grid-row: 2/3;
+  background-image: url(../images/koromiko2.webp);
+}
+.gallery-grid-container .box4 {
+  grid-row: 2/3;
+  background-image: url(../images/Kōwhai.webp);
+}
+.gallery-grid-container .box5 {
+  grid-row: 3/4;
+  background-image: url(../images/kākābeak.webp);
+}
+.gallery-grid-container .box6 {
+  grid-row: 3/4;
+  background-image: url(../images/Manuka.webp);
+}
+.gallery-grid-container .box7 {
+  grid-row: 4/5;
+  background-image: url(../images/Toi\ Toi.webp);
+}
+.gallery-grid-container .box8 {
+  grid-row: 4/5;
+  background-image: url(../images/Nīkau\ palm.webp);
+}
+.gallery-grid-container .box9 {
+  grid-row: 5/6;
+  background-image: url(../images/tī_kōuka.webp);
+}
+.gallery-grid-container .box10 {
+  grid-row: 5/6;
+  background-image: url(../images/silver_fern.webp);
+}
+.gallery-grid-container .box11 {
+  grid-row: 6/7;
+  background-image: url(../images/rimu.webp);
+}
+.gallery-grid-container .box12 {
+  grid-row: 6/7;
+  background-image: url(../images/koru_fern.webp);
+}
+
+footer {
+  position: relative;
+  top: 90px;
+  padding: 25px;
+  width: 100vw;
+  background-color: #669900;
+  font-family: "roboto";
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+footer .footer-container label {
+  font-size: 20px;
+  font-weight: 800;
+}
+footer .footer-container ul {
+  list-style: none;
+  color: white;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-header {
+    font-size: 30px;
+    padding-bottom: 6%;
+  }
+  .navigation-header nav .hamburger {
+    right: 5%;
+  }
+  .navigation-header nav .navigation-items {
+    width: 50%;
+  }
+  .navigation-header nav .navigation-items a {
+    font-size: 40px;
+  }
+  .hero-container .hero-image {
+    width: 80%;
+    height: 450px;
+  }
+  .button .button__join {
+    width: 100%;
+    font-size: 8em;
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
+  .gallery-grid-container .box1, .gallery-grid-container .box2, .gallery-grid-container .box3, .gallery-grid-container .box4, .gallery-grid-container .box5, .gallery-grid-container .box6, .gallery-grid-container .box7, .gallery-grid-container .box8, .gallery-grid-container .box9, .gallery-grid-container .box10, .gallery-grid-container .box11, .gallery-grid-container .box12 {
+    width: 210px;
+    height: 210px;
+  }
+  .gallery-grid-container .box1 {
+    grid-area: 1/1/2/2;
+  }
+  .gallery-grid-container .box2 {
+    grid-area: 1/2/2/3;
+  }
+  .gallery-grid-container .box3 {
+    grid-area: 1/3/2/4;
+  }
+  .gallery-grid-container .box4 {
+    grid-area: 2/1/3/2;
+  }
+  .gallery-grid-container .box5 {
+    grid-area: 2/2/3/3;
+  }
+  .gallery-grid-container .box6 {
+    grid-area: 2/3/3/4;
+  }
+  .gallery-grid-container .box7 {
+    grid-area: 3/1/4/2;
+  }
+  .gallery-grid-container .box8 {
+    grid-area: 3/2/4/3;
+  }
+  .gallery-grid-container .box9 {
+    grid-area: 3/3/4/4;
+  }
+  .gallery-grid-container .box10 {
+    grid-area: 4/1/5/2;
+  }
+  .gallery-grid-container .box11 {
+    grid-area: 4/2/5/3;
+  }
+  .gallery-grid-container .box12 {
+    grid-area: 4/3/5/4;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navigation-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Navigation Items */
+  }
+  .navigation-header nav .hamburger {
+    display: none;
+  }
+  .navigation-header nav .hamburger #closeHam {
+    display: none;
+  }
+  .navigation-header nav .logo-container img {
+    display: flex;
+    width: 150px;
+    height: 100px;
+  }
+  .navigation-header nav .navigation-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    position: fixed;
+    top: 0%;
+    background-color: #669900;
+    border-radius: 0;
+    padding: 20px;
+    gap: 20px;
+  }
+  .navigation-header nav .navigation-items a {
+    justify-content: center;
+    font-size: 20px;
+  }
+  .hero-container {
+    border-radius: 20px;
+    padding-bottom: 10%;
+  }
+  .hero-container .hero-image {
+    width: 70%;
+    height: 590px;
+  }
+  .button .button__join {
+    width: 100%;
+    font-size: 10.8em;
+    padding: 10px 180px;
+    border-radius: 10px;
+  }
+  .header-container {
+    font-size: 2.5em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+  }
+  .text-container {
+    border: 10px solid #669900;
+    border-radius: 20px;
+  }
+  .text-container h2 {
+    font-size: 2em;
+  }
+  .text-container h3, .text-container li {
+    font-size: 1.5em;
+  }
+  .text-container p {
+    font-size: 1.5em;
+  }
+  .text-container .join-button__button:hover {
+    background-color: #496d00;
+    box-shadow: inset 8px 8px 8px -4px rgba(0, 0, 0, 0.5);
+  }
+  .gallery-grid-container .box1, .gallery-grid-container .box2, .gallery-grid-container .box3, .gallery-grid-container .box4, .gallery-grid-container .box5, .gallery-grid-container .box6, .gallery-grid-container .box7, .gallery-grid-container .box8, .gallery-grid-container .box9, .gallery-grid-container .box10, .gallery-grid-container .box11, .gallery-grid-container .box12 {
+    width: 290px;
+    height: 290px;
+    border: 10px solid #669900;
+  }
+  .gallery-grid-container .box1 .text-background, .gallery-grid-container .box2 .text-background, .gallery-grid-container .box3 .text-background, .gallery-grid-container .box4 .text-background, .gallery-grid-container .box5 .text-background, .gallery-grid-container .box6 .text-background, .gallery-grid-container .box7 .text-background, .gallery-grid-container .box8 .text-background, .gallery-grid-container .box9 .text-background, .gallery-grid-container .box10 .text-background, .gallery-grid-container .box11 .text-background, .gallery-grid-container .box12 .text-background {
+    font-size: 2em;
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,507 @@
+@import 'variables';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(../images/Wellington\ Botanic\ Garden.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Navigation Header */
+.navigation-header{
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        /* Hamburger */
+        .hamburger{
+            position: absolute;
+            right: 6%;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 100;
+            color: white;
+            background-color: $primary-color;
+            font-family: "roboto";
+            border-radius: 8px;
+            z-index: 3; 
+        }
+        .hamburger #closeHam{
+            display: none;
+            font-weight: 100;
+        }
+        .logo-container img{
+            display: none;
+        }
+        /* Navigation Items */
+        .navigation-items{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 1%;
+            background-color: $primary-color;
+            border-radius: 10px 0 0 10px;
+            padding: 62px 30px;
+            gap: 10px;
+            font-size: 40px;
+            z-index: 3; 
+        }
+        .navigation-items > a{
+            color: black;
+            text-decoration: none;
+            font-family: "roboto";
+        }
+        .background-active a{
+            color: $white-font-colour;
+            text-decoration: none;
+            font-family: "roboto";
+            border-radius: 10px;
+        }
+    }
+}
+/* Home Page */
+.hero-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    padding-bottom: 15%;
+    .hero-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 86%;
+        height: 300px;
+        background-image: url(../images/logo.webp);
+        border-radius: 10px;
+        background-size: contain; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 6px -5px rgb(0, 0, 0, 0.5);
+    .button__link {
+      text-decoration: none;
+    }
+    .button__join {
+      display: flex;
+      margin: auto;
+      padding: 10px 40px;
+      background-color: $primary-color;
+      color: $secondary-colour;
+      font-size: 4.5em;
+      border: none;
+      border-radius: 10px;
+      &:hover {
+            background-color: $button-hover-background;
+            box-shadow: inset 8px 8px 8px -4px rgb(0, 0, 0, 0.5);
+        }
+    } 
+}
+
+.header-container{
+    @include header-text;
+}
+.text-container{
+    @include body-text;
+    button{
+        width: 50%;
+        background-color: $primary-color;
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 6px 6px 6px -5px rgb(0, 0, 0, 0.5);
+        &:hover{
+            background-color: $button-hover-background;
+            box-shadow: inset 8px 8px 8px -4px rgb(0, 0, 0, 0.5);
+        }
+    }
+    p{
+        padding: 10px 0;
+    }
+    li{
+        margin: 20px;
+    }
+
+    /* Membership Section */
+    .member-type-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .member-type{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .member-choice{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h4{
+            font-weight: 500;
+        }
+    }
+
+    .title-price .menu-heading,
+    .title-price .menu-price{
+        font-size: 1em;
+    }
+
+    .member-fee{
+        display: flex;
+        align-self: flex-start;
+        gap: 10px;
+    }
+    .join-button__button {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: $secondary-colour;
+        border: none;
+        font-size: 2em;
+        border-radius: 10px;
+    }
+}
+/* Sign-up Form */
+.form-container{
+    position: relative;
+    top: 70px;
+    font-family: 'roboto';
+    form{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 10px #669900;
+        -webkit-box-shadow: 0px 0px 10px 10px rgb(61, 92, 0);
+        -moz-box-shadow: 0px 0px 10px 10px rgb(61, 92, 0.5);
+        h2{
+            text-align: center;
+            color: $primary-color;
+            font-size: 2em;
+            padding-bottom: 5%;
+        }
+        label{
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input{
+            margin-bottom: 20px;
+            border: 3px solid $primary-color;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(152, 168, 173);
+            input:focus,
+            input:active{
+                background-color: rgb(242, 242, 242);
+            }
+        }
+        #formSubmit{
+            background-color: $primary-color;
+            color: $secondary-colour;
+            font-size: 3em;
+            border-radius: 5px;
+            border: none;
+            &:hover {
+                background-color: $button-hover-background;
+                box-shadow: inset 8px 8px 8px -4px rgb(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+/* Gallery */
+.gallery-grid-container{
+    position: relative;
+    top: 70px;
+    margin: auto;
+    width: 86%;
+    display: grid;
+    gap: 10px;
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12{
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        border: $border-outline;
+        background-size: cover;
+        background-position: center;
+        .text-background{
+            background-color: $primary-color;
+            position: relative;
+            font-family: 'roboto';
+            font-size: 1em;
+            top: 80%;
+            width: 55%;
+            padding: 1%;
+            border-radius: 0 4px 4px 0;
+            color: $white-font-colour;
+        }
+    }
+    .box1, .box3, .box5, .box7, .box9, .box11{
+        grid-column: 1/1;
+    }
+    .box2, .box4, .box6, .box8, .box10, .box12{
+        grid-column: 2/2;
+    }
+    .box1{
+        grid-row: 1/2;
+        background-image: url(../images/pōhutukawa.webp);
+    }
+    .box2{
+        grid-row: 1/2;
+        background-image: url(../images/Flax.webp);
+    }
+    .box3{
+        grid-row: 2/3;
+        background-image: url(../images/koromiko2.webp);
+    }
+    .box4{
+        grid-row: 2/3;
+        background-image: url(../images/Kōwhai.webp);
+    }
+    .box5{
+        grid-row: 3/4;
+        background-image: url(../images/kākābeak.webp);
+    }
+    .box6{
+        grid-row: 3/4;
+        background-image: url(../images/Manuka.webp);
+    }
+    .box7{
+        grid-row: 4/5;
+        background-image: url(../images/Toi\ Toi.webp);
+    }
+    .box8{
+        grid-row: 4/5;
+        background-image: url(../images/Nīkau\ palm.webp);
+    }
+    .box9{
+        grid-row: 5/6;
+        background-image: url(../images/tī_kōuka.webp);
+    }
+    .box10{
+        grid-row: 5/6;
+        background-image: url(../images/silver_fern.webp);
+    }
+    .box11{
+        grid-row: 6/7;
+        background-image: url(../images/rimu.webp);
+    }
+    .box12{
+        grid-row: 6/7;
+        background-image: url(../images/koru_fern.webp);
+    }
+}
+
+// Footer
+footer{
+    position: relative;
+    top: 90px;
+    padding: 25px;
+    width: 100vw;
+    background-color: $primary-color;
+    font-family: 'roboto';
+    .footer-container{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        label{
+            font-size: 20px;
+            font-weight: 800;
+        }
+        ul{
+            list-style: none;
+            color: $main-header-colour;
+        }
+    }
+}
+
+// Overlay
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 0;
+}
+
+// // Tablet
+@media screen and (min-width: 768px) {
+    .navigation-header{
+        font-size: 30px;
+        padding-bottom: 6%;
+        nav{
+            .hamburger{
+                right: 5%;
+            }
+            .navigation-items{
+                width: 50%;
+                a{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .hero-container{
+        .hero-image{
+            width: 80%;
+            height: 450px;
+        }
+    }
+    .button {
+        .button__join {
+            width: 100%;
+            font-size: 8em;
+            padding: 10px 50px;
+            border-radius: 10px;
+        } 
+    }
+    .gallery-grid-container{
+        .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12{
+            width: 210px;
+            height: 210px;
+        }
+        .box1 { grid-area: 1 / 1 / 2 / 2; }
+        .box2 { grid-area: 1 / 2 / 2 / 3; }
+        .box3 { grid-area: 1 / 3 / 2 / 4; }
+        .box4 { grid-area: 2 / 1 / 3 / 2; }
+        .box5 { grid-area: 2 / 2 / 3 / 3; }
+        .box6 { grid-area: 2 / 3 / 3 / 4; }
+        .box7 { grid-area: 3 / 1 / 4 / 2; }
+        .box8 { grid-area: 3 / 2 / 4 / 3; }
+        .box9 { grid-area: 3 / 3 / 4 / 4; }
+        .box10 { grid-area: 4 / 1 / 5 / 2; }
+        .box11 { grid-area: 4 / 2 / 5 / 3; }
+        .box12 { grid-area: 4 / 3 / 5 / 4; }
+    }
+}
+
+// // Desktop
+@media screen and (min-width: 992px) {
+    .navigation-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .hamburger{
+            display: none;
+            }
+            .hamburger #closeHam{
+                display: none;
+            }
+            .logo-container img{
+                display: flex;
+                width: 150px;
+                height: 100px;
+            }
+            /* Navigation Items */
+            .navigation-items{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100vw;
+                position: fixed;
+                top: 0%;
+                background-color: $primary-color;
+                border-radius: 0;
+                padding: 20px;
+                gap: 20px;
+                a{
+                    justify-content: center;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .hero-container{
+        border-radius: 20px;
+        padding-bottom: 10%;
+        .hero-image{
+            width: 70%;
+            height: 590px;
+        }
+    }
+    .button {
+        .button__join {
+            width: 100%;
+            font-size: 10.8em;
+            padding: 10px 180px;
+            border-radius: 10px;
+        } 
+    }
+    .header-container{
+        font-size: 2.5em;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 20px;
+    }
+    .text-container{
+        border: 10px solid $primary-color;
+        border-radius: 20px;
+        h2{
+            font-size: 2em;
+        }
+        h3, li{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        .join-button__button{
+            &:hover {
+                background-color: $button-hover-background;
+                box-shadow: inset 8px 8px 8px -4px rgb(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .gallery-grid-container{
+        .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12{
+            width: 290px;
+            height: 290px;
+            border: 10px solid $primary-color;
+            .text-background{
+                font-size: 2em;
+                width: 70%;
+            }
+        }
+    }
+}
