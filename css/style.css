@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -304,7 +303,7 @@ body {
 }
 .gallery-grid-container .box1 {
   grid-row: 1/2;
-  background-image: url(../images/pōhutukawa.webp);
+  background-image: url(../images/pohutukawa.webp);
 }
 .gallery-grid-container .box2 {
   grid-row: 1/2;
@@ -316,11 +315,11 @@ body {
 }
 .gallery-grid-container .box4 {
   grid-row: 2/3;
-  background-image: url(../images/Kōwhai.webp);
+  background-image: url(../images/kowhai.webp);
 }
 .gallery-grid-container .box5 {
   grid-row: 3/4;
-  background-image: url(../images/kākābeak.webp);
+  background-image: url(../images/kakabeak.webp);
 }
 .gallery-grid-container .box6 {
   grid-row: 3/4;
@@ -332,11 +331,11 @@ body {
 }
 .gallery-grid-container .box8 {
   grid-row: 4/5;
-  background-image: url(../images/Nīkau\ palm.webp);
+  background-image: url(../images/nikau.webp);
 }
 .gallery-grid-container .box9 {
   grid-row: 5/6;
-  background-image: url(../images/tī_kōuka.webp);
+  background-image: url(../images/ti_kouka.webp);
 }
 .gallery-grid-container .box10 {
   grid-row: 5/6;
