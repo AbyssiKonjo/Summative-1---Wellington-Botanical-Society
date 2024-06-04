@@ -352,24 +352,29 @@ body {
 
 footer {
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   top: 90px;
   padding: 25px;
   width: 100vw;
   background-color: #669900;
   font-family: "roboto";
 }
-footer .footer-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-footer .footer-container label {
+footer .footer-container h4 {
+  color: white;
   font-size: 20px;
   font-weight: 800;
+  padding-top: 4%;
+  padding-bottom: 2%;
 }
 footer .footer-container ul {
   list-style: none;
   color: white;
+}
+footer .footer-container ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 #overlay {
@@ -446,6 +451,16 @@ footer .footer-container ul {
   }
   .gallery-grid-container .box12 {
     grid-area: 4/3/5/4;
+  }
+  footer {
+    flex-direction: column;
+    text-align: left;
+  }
+  footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
 @media screen and (min-width: 992px) {

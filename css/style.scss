@@ -328,22 +328,29 @@ body{
 // Footer
 footer{
     position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     top: 90px;
     padding: 25px;
     width: 100vw;
     background-color: $primary-color;
     font-family: 'roboto';
     .footer-container{
-        display: flex;
-        justify-content: space-around;
-        gap: 20px;
-        label{
+        h4{
+            color: $white-font-colour;
             font-size: 20px;
             font-weight: 800;
+            padding-top: 4%;
+            padding-bottom: 2%;
         }
         ul{
             list-style: none;
             color: $main-header-colour;
+            li a{
+                color: $white-font-colour;
+                text-decoration: none;
+            }
         }
     }
 }
@@ -408,6 +415,18 @@ footer{
         .box10 { grid-area: 4 / 1 / 5 / 2; }
         .box11 { grid-area: 4 / 2 / 5 / 3; }
         .box12 { grid-area: 4 / 3 / 5 / 4; }
+    }
+
+    // Footer
+    footer{
+        flex-direction: column;
+        text-align: left;        
+        .footer-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+        }
     }
 }
 
